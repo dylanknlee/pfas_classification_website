@@ -1,0 +1,8 @@
+name: pfas_website
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.12
+  - numpy=1.23.5
+  - catboost=1.2.1
+  - streamlit=1.35.0
