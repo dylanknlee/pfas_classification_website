@@ -79,4 +79,4 @@ st.write("""Seen in the right sidebar are three classification models designed t
          and influent. Click on the corresponding link to visit each model and explore its predictions based on the specific wastewater treatment stage you are 
          interested in.
         """)
-st.write("Streamlit version:", st.__version__)
+
