@@ -39,13 +39,13 @@ def check_input(input, title):
 
 inputs = dict()
 
-# INPUT 1 - Year
+# INPUT - Year
 year = st.number_input("Select a Year", min_value=1900, max_value=2100, value=2024, step=1)
 inputs["Year"] = year
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 2 - Month
+# INPUT - Month
 months = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
@@ -62,44 +62,51 @@ inputs["Month"] = month_to_int[selected_month]
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 3 - Discharge Volume
-discharge_volume = st.text_input("Discharge Volume", "169.25")
+# INPUT - Flow
+flow = st.text_input("Flow in Influent (The flow rate of the influent to the facility (MGD))", "3.1334")
 
-inputs["Discharge Volume"] = check_input(discharge_volume, "Discharge Volume")
+inputs["Flow"] = check_input(flow, "Flow")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 4 - Influent Volume
-influent_volume = st.text_input("Influent Volume", "387")
+# INPUT - Influent Volume
+influent_volume = st.text_input("Influent Volume (acre-feet/month)", "387")
 
 inputs["Influent Volume"] = check_input(influent_volume, "Influent Volume")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 5 - Industrial Total
-industrial_total = st.text_input("Industrial Total", "0.625")
+# INPUT - Discharge Volume
+discharge_volume = st.text_input("Discharge Volume in Influent (acre-feet/month)", "169.25")
+
+inputs["Discharge Volume"] = check_input(discharge_volume, "Discharge Volume")
+
+#--------------------------------------------------------------------------------------------------
+
+# INPUT - Industrial Total
+industrial_total = st.text_input("Industrial Total in Influent (Percentage of total industrial inflow in all inflow) (%)", "0.625")
 
 inputs["Industrial Total"] = check_input(industrial_total, "Industrial Total")
 
 #--------------------------------------------------------------------------------------------------
 
 # INPUT 6 - Total ammonia
-total_ammonia = st.text_input("Total Ammonia", "22300000")
+total_ammonia = st.text_input("Total Ammonia in Influent (NH4 + NH3 (ng/L))", "22300000")
 
 inputs["Total Ammonia"] = check_input(total_ammonia, "Total Ammonia")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 7 - Biochemical Oxygen Demand
-biochemical_oxygen_demand = st.text_input("Biochemical Oxygen Demand", "255668102.2")
+# INPUT - Biochemical Oxygen Demand
+biochemical_oxygen_demand = st.text_input("Biochemical Oxygen Demand in Influent (BOD was measured in 5 days at 20 deg. C (ng/L))", "255668102.2")
 
 inputs["Biochemical Oxygen Demand"] = check_input(biochemical_oxygen_demand, 
                                                     "Biochemical Oxygen Demand")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 8 - Carbonaceous Biochemical Oxygen Demand
-carbonaceous_biochemical_oxygen_demand = st.text_input("Carbonaceous Biochemical Oxygen Demand", 
+# INPUT - Carbonaceous Biochemical Oxygen Demand
+carbonaceous_biochemical_oxygen_demand = st.text_input("Carbonaceous Biochemical Oxygen Demand in Influent (CBOD was measured in 5 days at 20 deg. C (ng/L))", 
                                                        "645000000")
 
 inputs["Carbonaceous Biochemical Oxygen Demand"] = check_input(
@@ -109,39 +116,32 @@ inputs["Carbonaceous Biochemical Oxygen Demand"] = check_input(
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 9 - Flow
-flow = st.text_input("Flow", "3.1334")
-
-inputs["Flow"] = check_input(flow, "Flow")
-
-#--------------------------------------------------------------------------------------------------
-
-# INPUT 10 - Total Dissolved Solids
-total_dissolved_solids = st.text_input("Total Dissolved Solids", "250000")
+# INPUT - Total Dissolved Solids
+total_dissolved_solids = st.text_input("Total Dissolved Solids in Influent (TDS (ng/L))", "507170067")
 
 inputs["Total Dissolved Solids"] = check_input(total_dissolved_solids,
                                                "Total Dissolved Solids")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 11 - Total Organic Carbon
-total_organic_carbon = st.text_input("Total Organic Carbon", "250000")
+# INPUT - Total Organic Carbon
+total_organic_carbon = st.text_input("Total Organic Carbon in Influent (TOC (ng/L))", "16043614")
 
 inputs["Total Organic Carbon"] = check_input(total_organic_carbon,
                                              "Total Organic Carbon")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 12 - Total Suspended Solids
-total_suspended_solids = st.text_input("Total Suspended Solids", "240900372.8")
+# INPUT - Total Suspended Solids
+total_suspended_solids = st.text_input("Total Suspended Solids in Influent (TSS (ng/L))", "240900372.8")
 
 inputs["Total Suspended Solids"] = check_input(total_suspended_solids,
                                                "Total Suspended Solids")
 
 #--------------------------------------------------------------------------------------------------
 
-# INPUT 13 - pH
-ph = st.text_input("pH", "7.0")
+# INPUT - pH
+ph = st.text_input("pH of Influent", "7.0")
 
 # custom pH error checking function
 try:

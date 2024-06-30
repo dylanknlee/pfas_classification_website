@@ -1,4 +1,7 @@
 import streamlit as st
+st.markdown("""
+    <h1>Prediction Tool for PFAS in California WWTPs</h1>
+    """, unsafe_allow_html=True)
 
 st.markdown("""
     <h2>Machine Learning for Monitoring Per- and Polyfluoroalkyl Substance (PFAS) in California's Wastewater Treatment Plants: An Assessment of Occurrence and Fate</h2>
@@ -29,7 +32,7 @@ lab_website_url = "https://olivareslab.org/research/"
 
 # Create buttons in the container
 with st.container():
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     
     # Paper button
     with col1:
@@ -42,6 +45,10 @@ with st.container():
     # Lab website button
     with col3:
         st.markdown(f"[![Lab Website](https://img.shields.io/badge/Lab%20Website-Link-blue.svg)]({lab_website_url})")
+
+    # Data button
+    with col4:
+        st.markdown(f"[![Data](https://img.shields.io/badge/Data-Link-blue.svg)]({lab_website_url})")
 
 st.header("Abstract")
 
@@ -79,4 +86,12 @@ st.write("""Seen in the right sidebar are three classification models designed t
          and influent. Click on the corresponding link to visit each model and explore its predictions based on the specific wastewater treatment stage you are 
          interested in.
         """)
+
+# Contact Section
+st.markdown("""
+    <h2>Contact</h2>
+    """, unsafe_allow_html=True)
+
+st.markdown("If you want to discover more, then please contact the <a href=https://olivareslab.org/join-the-lab/)>Olivares Lab</a>.", unsafe_allow_html=True)
+
 
