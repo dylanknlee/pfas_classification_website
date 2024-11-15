@@ -9,7 +9,7 @@ file_path = 'models/CatBoost_model_bio.pkl'
 with open(file_path, 'rb') as file:
     bio_classifier = pickle.load(file)
 
-st.title("Risk Prediction of Total PFAS in Biosolids")
+st.title("Risk Prediction of Total PFAS in Biosolids (Non-PFAS as Input Features)")
 
 st.write("""This ML model classifies PFAS levels in WWTP biosolids as high risk (1) if they are detected and low risk (0) if 
          they are not detected. The model utilizes commonly monitored standard operational parameters of WWTPs as inputs, including: 

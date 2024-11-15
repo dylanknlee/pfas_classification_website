@@ -3,13 +3,13 @@ import numpy as np
 import pickle
 
 # Specify the path to the model's .pkl file
-file_path = 'models/CatBoost_model_eff.pkl'
+file_path = 'models/CatBoost_eff2_web.pkl'
 
 # Open the file in binary read mode and load the model
 with open(file_path, 'rb') as file:
     eff_classifier = pickle.load(file)
 
-st.title("Risk Prediction of Total PFAS in Effluent")
+st.title("Risk Prediction of Total PFAS in Effluent (Non-PFAS as Input Features)")
 
 # model description
 st.write("""This ML model classifies PFAS levels in WWTP effluent as high risk (1) if they exceed 70 nanograms per liter (ng/L), and low risk (0) 
