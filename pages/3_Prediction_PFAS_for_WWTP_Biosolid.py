@@ -268,6 +268,6 @@ if st.button("Make Prediction"):
         prediction = bio_classifier.predict(list(inputs.values()))
 
         if prediction == 0:
-            st.write("PFAS is at low risk for detection in biosolids.")
+            st.write("Total PFAS is at low risk for detection in biosolids.")
         else:
-            st.write("PFAS is at high risk for detection in biosolids.")
+            st.write("Total PFAS is at high risk for detection in biosolids.")

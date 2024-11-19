@@ -8,10 +8,10 @@ st.title("Risk Prediction of Total PFAS in Biosolid (only PFASs in Influent as I
 st.write("""This ML model classifies Total PFAS levels in WWTP biosolids as high risk if they are detected and low risk if 
          they are not detected. The model utilizes 39 PFAS's measured in influent as inputs.""")
 
-st.write("""When using the model, please ensure that all inputs are in the correct format. Input values should strictly be numerical 
-         floats; avoid using letters or non-numeric characters. The default values visible upon loading the website are set to median 
-         values derived from the dataset used during model training. These defaults serve as starting points for predictions and can 
-         be adjusted based on your specific input data.
+st.write("""When using the model, please ensure that all input values are numerical floats and do not include letters or non-numeric characters. 
+         Upon accessing the website, the default input values will be set to 0, which serve as starting points and can be adjusted based on your
+         specific input data. Please enter your measurements for the PFAS compounds detected in the influent. The model uses this data to predict 
+         the total PFAS risk in the effluent or biosolid. Providing more detailed PFAS information will yield more accurate results.
          """)
 
 # Specify the path to the model's .pkl file
@@ -61,6 +61,6 @@ if st.button("Make Prediction"):
         inputs = [inputs]
         prediction = bio_classifier.predict(inputs)
         if prediction == 0:
-            st.write("PFAS is at low risk for detection in biosolids.")
+            st.write("Total PFAS is at low risk for detection in biosolids.")
         else:
-            st.write("PFAS is at high risk for detection in biosolids.")
+            st.write("Total PFAS is at high risk for detection in biosolids.")

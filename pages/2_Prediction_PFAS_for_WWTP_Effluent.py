@@ -272,6 +272,6 @@ if st.button("Make Prediction"):
         prediction = eff_classifier.predict(list(inputs.values()))
 
         if prediction == 0:
-            st.write("The PFAS risk is lower than 70 nanograms per liter (70 ng/L).")
+            st.write("Total PFAS risk is lower than 70 nanograms per liter (70 ng/L).")
         else:
-            st.write("The PFAS risk is greater than 70 nanograms per liter (70 ng/L).")
+            st.write("Total PFAS risk is greater than 70 nanograms per liter (70 ng/L).")
