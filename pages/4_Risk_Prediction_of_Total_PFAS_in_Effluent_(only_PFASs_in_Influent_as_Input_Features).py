@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-st.title("Risk Prediction of Total PFAS in Biosolid (only PFASs in Influent as Input Features)")
+st.title("Risk Prediction of Total PFAS in Effluent (only PFASs in Influent as Input Features)")
 
 # model description
 st.write("""This ML model classifies PFAS levels in WWTP effluent as high risk if they exceed 70 nanograms per liter (ng/L) and low risk 
