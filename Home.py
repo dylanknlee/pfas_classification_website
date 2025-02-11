@@ -30,6 +30,7 @@ st.markdown("""
 paper_url = ...
 github_url = "https://github.com/JialinDong/Machine-Learning-for-Monitoring-Per--and-Polyfluoroalkyl-Substance-PFAS-in-California-s-Wastewater"
 lab_website_url = "https://olivareslab.org/research/"
+data_url = "https://github.com/JialinDong/ML-Monitoring-PFAS-Californias-WWTP/tree/main/Data"
 
 # Create buttons in the container
 with st.container():
@@ -49,7 +50,7 @@ with st.container():
 
     # Data button
     with col4:
-        st.markdown(f"[![Data](https://img.shields.io/badge/Data-Link-blue.svg)]({lab_website_url})")
+        st.markdown(f"[![Data](https://img.shields.io/badge/Data-Link-blue.svg)]({data_url})")
 
 st.header("Abstract")
 
@@ -83,9 +84,14 @@ st.image("figures/Figure3.jpg", caption = """Figure 3: Geographic distribution a
          INF/EFF/BIO.""")
 
 # buttons and/or caption to move to different models
-st.write("""Seen in the right sidebar are three classification models designed to predict PFAS risk in WTTP biosolids, effluent, 
-         and influent. Click on the corresponding link to visit each model and explore its predictions based on the specific wastewater treatment stage you are 
-         interested in.
+st.write("""Our website serves as an interactive platform embedded with five classification models designed specifically for Task 1 of our study: predicting total PFAS risk in influent, effluent, 
+         and biosolids. Among these five models, three are developed to predict PFAS concentrations using a limited set of non-PFAS input features, allowing for estimations in influent, effluent, 
+         and biosolids. The remaining two models utilize PFAS values from influent alone to predict PFAS levels in effluent and biosolids. Collectively, these models provide a comprehensive approach 
+         to assessing PFAS risk, supporting informed decision-making in wastewater treatment and environmental monitoring.
+         """)
+
+st.write("""The five classification models introduced above are available in the left sidebar of this website. Click on the corresponding link to visit each model and explore its predictions based 
+         on the specific wastewater treatment stage you are interested in.
         """)
 
 # Contact Section
